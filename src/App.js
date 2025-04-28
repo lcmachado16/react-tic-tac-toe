@@ -17,7 +17,7 @@ export default function Game() {
   const moves = history.map((squares, move) => {
     let description = move > 0 ? 'Go to move #' + move : 'Go to game start';
     return (
-      <li>
+      <li key={move}>
         <button onClick={() => jumpTo(move)}>{description}</button>
       </li>
     )
